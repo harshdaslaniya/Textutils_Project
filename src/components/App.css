@@ -1,0 +1,132 @@
+
+
+.center {  
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-position: center;  
+}  
+.parent {
+  height: 150px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.child {
+
+  width: 150px;
+  height: 150px;
+}
+  
+    .parent2 {
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+
+    .conteudo {
+
+      display: inline-flex; 
+      border-bottom: 4px solid #44a1b6; 
+      border-radius: 10px;
+      }
+      
+      .conteudo img {
+        
+        width: 60px;
+      }
+      .conteudo a {
+        
+        width: 60px;
+        filter: drop-shadow(0px 0px 1px #4b4b50);
+        animation: flutuar 3s linear infinite;
+      }
+      @keyframes flutuar{
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-23px);
+        }
+      } 
+      
+      .conteudo a:nth-child(2) {
+      animation-delay: .2s; 
+    }
+    .conteudo a:nth-child(3) {
+      animation-delay: .4s;
+    } 
+    .conteudo a:nth-child(4) {
+      animation-delay: .6s;
+    }
+    .conteudo a:nth-child(5) { 
+        animation-delay: .8s;
+      }
+    .zoom {
+      padding: 5px;
+      border-radius: 50%;
+      }
+    .zoom:hover{
+        transform: scale(1.3);
+      }
+      :root {
+        --cor-background: #16161a;
+        --cor-reflexo: rgb(247, 239, 239);
+        --cores-dancantes: rgb(76, 217, 105), rgb(52, 170, 220), rgb(88, 86, 217),
+            rgb(255, 45, 83);
+      }
+      .lighting {
+        background: linear-gradient(to right, var(--cores-dancantes)); 
+        width: 250px;
+        height: 90px;
+        border-radius: 10px;
+         position: relative; 
+         z-index: 999;
+         animation: coresDancantes 2s linear infinite;
+        }
+        
+        @keyframes coresDancantes { 
+          100% {
+          filter: hue-rotate(360deg);
+          }
+        } 
+        .lighting .laser,
+        .lighting span {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .lighting .laser {
+            z-index: 1;
+            background-color: var(--cor-background);
+            width: 240px;
+            height: 80px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 5px;
+        }
+
+        .lighting>span {
+            height: 100%;
+            width: 100%;
+            background: inherit;
+            border-radius: 10px;
+        }
+
+        .lighting>span:nth-child(1) {
+            filter: blur(2px);
+        }
+
+        .lighting>span:nth-child(2) {
+            filter: blur(5px);
+        }
